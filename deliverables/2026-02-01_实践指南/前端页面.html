@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenClaw 实践指南</title>
+  <style>
+    :root{--bg:#0b0f17;--card:#111827;--muted:#94a3b8;--text:#e5e7eb;--accent:#60a5fa;--line:rgba(148,163,184,.2);--radius:18px;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",Segoe UI,Roboto,Helvetica,Arial; background:radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.18), transparent), var(--bg); color:var(--text);}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    .hero{padding:22px 22px 18px;border:1px solid var(--line);background:rgba(17,24,39,.75);backdrop-filter: blur(10px);border-radius:var(--radius)}
+    h1{font-size:22px;letter-spacing:.2px}
+    .sub{margin-top:10px;color:var(--muted);line-height:1.6}
+    .grid{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}}
+    .card{padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(17,24,39,.65)}
+    .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    .v{margin-top:10px;font-size:15px;line-height:1.6}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#cfe6ff;font-size:12px;margin-top:12px}
+    .steps{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+    .step{padding:12px 12px;border-radius:14px;border:1px dashed var(--line);background:rgba(2,6,23,.25)}
+    .step b{color:#fff}
+    a{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>OpenClaw 实践指南（Airtable × Dashboard × Discord）</h1>
+      <div class="sub">一套能跑通「输入 → 结构化存储 → 看板信号灯 → 定期提醒/复盘 → GitHub 交付」的个人执行系统。目标不是记录一切，而是持续推进。</div>
+      <div class="pill">建议节奏：每两天 18:00 轻提醒 · 周日 20:00 周复盘</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="k">Architecture</div>
+        <div class="v">
+          • Airtable：全量存储（Ideas/Tasks/Daily/…）<br/>
+          • Dashboard：近14天 Top8 信号灯<br/>
+          • Discord：输入 + 提醒通道<br/>
+          • GitHub：交付与资产归档
+        </div>
+      </div>
+      <div class="card">
+        <div class="k">Rules</div>
+        <div class="v">
+          1) 看板只保留 Top8（强迫收敛）<br/>
+          2) 写入前必须确认（数据干净）<br/>
+          3) 复盘看“下一步动作”，不看情绪
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="k">Onboarding（最短上手）</div>
+      <div class="steps">
+        <div class="step"><b>Step 1</b>：把 Airtable 设成“大后方”，只要你能随时检索到数据就够。</div>
+        <div class="step"><b>Step 2</b>：Dashboard 只展示近 14 天 Top8（低信息量）。</div>
+        <div class="step"><b>Step 3</b>：设置固定提醒节奏（下班地铁看一眼）。</div>
+        <div class="step"><b>Step 4</b>：所有产物按日期归档到 GitHub（可追踪、可复用）。</div>
+      </div>
+      <div class="sub" style="margin-top:12px">这页是“对外可分享版本”。真正的自动同步逻辑在服务器脚本与技能里。</div>
+    </div>
+  </div>
+</body>
+</html>
